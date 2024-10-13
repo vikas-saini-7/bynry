@@ -13,11 +13,11 @@ const Home = () => {
             Profile Explorer
           </h1>
           <div className="flex gap-8 mt-8">
-            <Link className="hover:text-blue-500" to="/profiles">
-              /profiles
+            <Link className="hover:text-blue-500 underline" to="/profiles">
+              <button className="btn px-4">profiles</button>
             </Link>
-            <Link className="hover:text-blue-500" to="/admin">
-              /admin
+            <Link className="hover:text-blue-500 underline" to="/admin">
+              <button className="btn px-4">admin</button>
             </Link>
           </div>
         </div>

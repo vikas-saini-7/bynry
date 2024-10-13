@@ -331,7 +331,7 @@ const UpdateProfileModal = ({ data }) => {
                 type="submit"
                 className="w-full px-4 py-2 bg-gray-700 text-white font-semibold rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                Create Profile
+                Update Profile
               </button>
             </div>
           </form>
