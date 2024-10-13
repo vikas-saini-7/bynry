@@ -28,17 +28,6 @@ const Profiles = () => {
   const [searchedData, setSearchedData] = React.useState(profilesData);
   const [query, setQuery] = React.useState("");
 
-  // filter modal
-  // const [filterModalIsOpen, setFilterModalIsOpen] = React.useState(false);
-
-  // const openFilterModal = () => {
-  //   setFilterModalIsOpen(true);
-  // };
-
-  // const closeFilterModal = () => {
-  //   setFilterModalIsOpen(false);
-  // };
-
   // search functionalities
   const handleSearch = (query) => {
     const filteredData = profilesData.filter(
@@ -60,7 +49,7 @@ const Profiles = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen">
       <div
-        className={`w-[32rem] mx-auto overflow-auto px-4 lg:h-auto ${
+        className={`w-auto lg:w-[32rem] mx-auto overflow-auto px-4 lg:h-auto ${
           activeProfile != null && "h-1/2"
         }`}
       >
@@ -78,43 +67,13 @@ const Profiles = () => {
             onChange={(e) => setQuery(e.target.value)}
           />
           {/* filters  */}
-          {/* <div>
-            <button onClick={openFilterModal}>...</button>
-            <Modal
-              isOpen={filterModalIsOpen}
-              onRequestClose={closeFilterModal}
-              style={customStyles}
-            >
-              <div className="w-[24rem]">
-                <h1 className="font-bold text-2xl">Filters</h1>
-                <div>
-                  <div className="my-4">
-                    <h2>Location</h2>
-                    <div className="flex items-center">
-                      <input
-                        type="checkbox"
-                        name="maharashtra"
-                        id="maharashtra"
-                      />
-                      <label htmlFor="maharashtra">Maharashtra</label>
-                    </div>
-                    <div className="flex items-center">
-                      <input type="checkbox" name="delhi" id="delhi" />
-                      <label htmlFor="delhi">Delhi</label>
-                    </div>
-                  </div>
-                </div>
-                <button className="btn">Apply</button>
-              </div>
-            </Modal>
-          </div> */}
         </div>
 
         {/* mapping profiles data  */}
         {searchedData.length > 0 ? (
           searchedData?.map((profile) => <ProfileItem data={profile} />)
         ) : (
-          <p className="flex items-center mt-4">Not Data Found </p>
+          <p className="flex items-center mt-4">No Data Found </p>
         )}
       </div>
 
